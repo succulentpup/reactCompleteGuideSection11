@@ -8,15 +8,15 @@ const Cart = (props) => {
     name: 'sushi',
     amount: 2,
     price: 12.99,
-  }].map((item) => <li>{ item.name }</li>) }</ul>
-  return (<Modal>
+  }].map((item) => <li key={item.id}>{ item.name }</li>) }</ul>
+  return (<Modal closeCart={ props.onCloseCart }>
     { cartItems }
     <div className={ styledComponents.total }>
       <span>Total Amount</span>
       <span>35.55</span>
     </div>
     <div className={ styledComponents.actions }>
-      <button className={ styledComponents['button--alt'] }>Close</button>
+      <button className={ styledComponents['button--alt'] } onClick={props.onCloseCart}>Close</button>
       <button className={ styledComponents.button }>Order</button>
     </div>
   </Modal>);
