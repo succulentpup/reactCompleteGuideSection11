@@ -4,7 +4,7 @@ import Input from '../../UI/Input';
 const MealItemForm = (props) => {
   return (<form className={styledClasses.form}>
     <Input
-      label={'Amount'}
+      label={'Quantity'}
       input={{
         id: 'amount_' + props.id,
         type: 'number',
